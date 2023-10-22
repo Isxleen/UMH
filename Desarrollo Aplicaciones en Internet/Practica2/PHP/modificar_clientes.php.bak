@@ -1,0 +1,46 @@
+
+<?php
+include("ConexionPDO.php");
+$id = $_POST["id"];
+$dni=$_POST["dni"];
+$nombre=$_POST["nombre"];
+$apellido1=$_POST["apellido1"];
+$apellido2=$_POST["apellido2"];
+$direccion=$_POST["direccion"];
+$cp=$_POST["cp"];
+$poblacion=$_POST["poblacion"];
+$provincia=$_POST["provincia"];
+$telf=$_POST["telf"];
+$email=$_POST["email"];
+
+echo "DNI = '$dni',
+			Id = '$id'
+			Nombre = '$nombre',
+			Apellido1 = '$apellido1',
+			Apellido2 = '$apellido2',
+			Direccion = '$direccion',
+			CP = '$cp',
+			Poblacion = '$poblacion',
+			Provincia = '$provincia',
+			Telefono = '$telf',
+			Email = '$email',";
+
+$sql = "UPDATE clientes SET DNI = '$dni',
+			Nombre = '$nombre',
+			Apellido1 = '$apellido1',
+			Apellido2 = '$apellido2',
+			Direccion = '$direccion',
+			CP = '$cp',
+			Poblacion = '$poblacion',
+			Provincia = '$provincia',
+			Telefono = '$telf',
+			Email = '$email'
+		WHERE Id_Cliente='$id'";
+		
+$update = $conexion->prepare($sql);
+$update->execute();
+
+echo"El perfil del cliente se ha modificado con éxito
+	<a href=gestion_clientes.php><input type=button value=Volver></a>"
+?>
+

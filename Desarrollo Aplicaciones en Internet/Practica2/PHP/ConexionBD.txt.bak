@@ -1,0 +1,7 @@
+<?php
+function dbConnect{
+	$conexion = null;
+	$host = localhost;
+	$db = ;
+	
+}
