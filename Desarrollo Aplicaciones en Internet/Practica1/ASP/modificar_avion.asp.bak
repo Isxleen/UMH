@@ -1,0 +1,10 @@
+<!-- #include file=conexion.asp -->
+<html>
+<table>
+<%
+	avion=request.querystring("avion")
+	nplazas=request.querystring("plazas")
+	precio=request.querystring("precio")
+%>
+</table>
+</html>

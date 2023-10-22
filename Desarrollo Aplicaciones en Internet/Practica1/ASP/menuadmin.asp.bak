@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!-- #include file=seguridad.asp-->
+<html>
+<body>
+
+	<%
+	
+	%>
+	
+	<input type="button" value="Añadir avión">
+	<input type="button" value="Eliminar aviones">
+</body>
+</html>

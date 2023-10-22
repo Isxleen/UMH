@@ -1,0 +1,16 @@
+<!-- #include file=conexion.asp -->
+<%
+    ciudad_origen = request.querystring("ciudad_origen")
+    SentenciaSQL = "select * from LISTA_DESTINOS(" & ciudad_origen&")"
+    select = select & "<select name='ciudad_destino' id='ciudad_destino'>"
+    
+    Set rs = Conexion.Execute(SentenciaSQL)
+
+    do while not rs.EOF
+        select = select & "<option value='" & rs("IDCIUDADDESTINO")&"'>" & rs("CIUDAD_DESTINO") & "</option>"
+		rs.MoveNext
+	loop
+	
+	select = select & "</select>"
+	response.write(select)
+%>

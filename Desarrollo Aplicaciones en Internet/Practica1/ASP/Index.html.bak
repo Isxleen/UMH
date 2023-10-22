@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>Titulo</h1>
+		<img scr="img/logo2.png" width="300" alt="logo"/>
+		<a href="identificación.asp">Iniciar sesion</a>
+		
+		<form method="get" action="recibir_datos.asp">
+			Origen: <input type="text" name="origen"><br>
+			Destino: <input type="text" name="destino"><br><br>
+			Fecha salida: <input type="text" name="fechasalida"><br><br>
+			Fecha de vuelta: <input type="text" name="fechavuelta"><br><br>
+			
+			<input type="submit" value="Bucar">
+		</form
+		
+	</body>
+</html>

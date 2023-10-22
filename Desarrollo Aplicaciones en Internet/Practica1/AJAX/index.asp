@@ -1,0 +1,145 @@
+<!-- #include file=conexion.asp -->
+<html>
+<head>
+	<title>Ejemplo Listado Vuelos</title>
+	<meta charset="UTF-8"/>
+	
+  <script type="text/javascript">
+    
+    function AJAXCrearObjeto(){
+      var obj;
+      if (window.XMLHttpRequest) { 
+       obj = new XMLHttpRequest();
+      }else { 
+        try {
+        obj = new ActiveXObject("Microsoft.XMLHTTP");
+        }catch (e) {
+        }
+      }
+      return obj;
+    }
+
+
+function leerDatosTabla(){
+
+	if (oXML.readyState == 4) {
+		var xml = oXML.responseXML.documentElement;
+
+
+		var tabla = document.getElementById('tabla_vuelos');
+		var definicion_tabla = new String("");
+
+
+		definicion_tabla ='<th>Id Vuelo</th><th>ID Ciudad Origen</th><th>ID Ciudad Destino</th><th>Fecha</th><th>Compa&ntilde;&iacute;a</th><th>Plazas Disponibles</th><th>Duraci&oacute;n</th><th>ID Avi&oacute;n</th><tr>';
+
+		var v;
+		var item;
+		for (i = 0; i < xml.getElementsByTagName('vuelo').length; i++){
+		
+			item = xml.getElementsByTagName('vuelo')[i];
+			
+			v = item.getElementsByTagName('idvuelo')[0].firstChild.data;
+			definicion_tabla =definicion_tabla+'<td>'+ v +'</td>';
+			
+			
+			v = item.getElementsByTagName('ciudad_origen')[0].firstChild.data;
+			definicion_tabla =definicion_tabla+'<td>'+ v +'</td>';
+			
+			v = item.getElementsByTagName('ciudad_destino')[0].firstChild.data;
+			definicion_tabla= definicion_tabla+'<td>' + v +'</td>';
+			
+			v = item.getElementsByTagName('fecha')[0].firstChild.data;
+			definicion_tabla= definicion_tabla+'<td>' + v + '</td>';
+			
+			
+			v = item.getElementsByTagName('compania')[0].firstChild.data;
+			definicion_tabla= definicion_tabla+'<td>' + v + '</td>';
+			
+			
+			v = item.getElementsByTagName('n_plazas_disponibles')[0].firstChild.data;
+			definicion_tabla= definicion_tabla+'<td>' + v + '</td>';
+			
+			
+			v = item.getElementsByTagName('duracion')[0].firstChild.data;
+			definicion_tabla= definicion_tabla+'<td>' + v + '</td>';
+		
+			
+			v = item.getElementsByTagName('avion')[0].firstChild.data;
+			definicion_tabla= definicion_tabla+'<td>' + v + '</td></tr>';
+		}
+		
+		tabla.innerHTML = definicion_tabla;
+		}
+	}
+    function leerdatos(){
+      if(objetoAjax.readyState==4){
+        var div = document.getElementById('destino');
+        div.innerHTML = objetoAjax.responseText;
+      }
+  }
+  
+
+  function mostrar_destino(){
+    selectOrigen = document.forms.origen.ciudad_origen;
+    seleccionado = selectOrigen.value;
+
+    objetoAjax = AJAXCrearObjeto();
+    objetoAjax.open('get','cargar_vuelos.asp?ciudad_origen='+seleccionado, true);
+    objetoAjax.onreadystatechange = leerdatos;
+
+    objetoAjax.send('');
+
+  }
+
+  function mostrar_vuelos(){
+
+    var valorx = document.getElementById("ciudad_origen").value;
+    var valory = document.getElementById("ciudad_destino").value;
+    
+    oXML = AJAXCrearObjeto();
+    oXML.open('POST', 'consulta.asp');
+    oXML.onreadystatechange = leerDatosTabla;
+    
+    oXML.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    oXML.send('ciudad_origen='+valorx+'&ciudad_destino='+valory);
+	
+
+  }
+
+    
+  </script>	
+	
+</head>
+
+<body>
+<h2>SkyTraveler</h2>
+ 
+<form method="POST" name="origen" id="origen">
+    <select name="ciudad_origen" id="ciudad_origen" onChange="return mostrar_destino();">
+		<option>Ciudad Origen</option>
+    <%
+        Set origen = Conexion.Execute("select IDCIUDAD, CIUDAD from CIUDAD order by IDCIUDAD")
+        do while not origen.EOF
+            Response.Write("<option value='" & origen("IDCIUDAD") & "'>" & origen("CIUDAD") & "</option>")
+          origen.MoveNext
+        loop
+    %>
+    </select>
+	<br>
+	<div id="destino">
+		<select id="ciudad_destino" name="ciudad_destino"> 
+			<option>Ciudad Destino</option>
+		
+		</select>
+	</div>
+	<input type="button" name="buscar_vuelo" onClick="return mostrar_vuelos();" value="Buscar vuelo"></input>
+	
+	<table id="tabla_vuelos" name="tabla_vuelos" border='1'>
+	</table>
+
+
+</form>
+
+</body>
+</html>
