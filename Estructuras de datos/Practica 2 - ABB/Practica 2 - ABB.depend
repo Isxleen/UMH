@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1623005336 source:d:\users\isabel\uni\nueva carpeta\practica 2 - abb\main.cpp
+	<iostream>
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string>
+	<Windows.h>
+

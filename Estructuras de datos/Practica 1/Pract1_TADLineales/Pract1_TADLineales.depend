@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1619781864 source:c:\users\isabel\desktop\uni\nueva carpeta\pract1_tadlineales\main.cpp
+	<iostream>
+	<cstdlib>
+	<stdlib.h>
+	<time.h>
+	<Windows.h>
+
+1622038101 source:c:\users\isabel\desktop\uni\2do curso\2do cuatri\estructuras de datos\practicas\p1 - ed\pract1_tadlineales\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
