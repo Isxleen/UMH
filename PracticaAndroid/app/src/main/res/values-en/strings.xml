@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">applogin54208217T</string>
+
+    <string name="hola">Hello!</string>
+    <string name="email">Email</string>
+    <string name="contraseña">Password</string>
+    <string name="contraseñacinfirm">Confirm Password</string>
+    <string name="login">Log In</string>
+    <string name="preg_nuevo">Don\'t have an account?</string>
+    <string name="crear_cuenta">Create Account</string>
+
+    <string name="nombre">Name</string>
+    <string name="apellidos">Last Name</string>
+    <string name="fnacimiento">Date of Birth</string>
+    <string name="continuar">Continue</string>
+    <string name="cancelar">Cancel</string>
+    <string name="pregSeguridad">Security Question</string>
+    <string name="pregCancelar">Are you sure you want to exit?</string>
+    <string name="respSeguridad">Answer</string>
+    <string name="si">Yes</string>
+    <string name="intereses">What are you interested in?</string>
+    <string name="Otintereses">Enter other</string>
+    <string name="segFA">Second factor of authentication</string>
+    <string-array name="array_preguntas">
+        <item name="preg">Security Question</item>
+        <item name="preg0">Favorite animal?</item>
+        <item name="preg1">Favorite city?</item>
+        <item name="preg2">What is the name of your best friend?</item>
+    </string-array>
+
+    <string name="TUSU1">Email is a required field</string>
+    <string name="TUSU2">The entered email already exists</string>
+    <string name="TUSU8">Enter a valid email</string>
+    <string name="TUSU3">Name is a required field</string>
+    <string name="TUSU4">Password is a required field</string>
+    <string name="TUSU5">Confirm the password</string>
+    <string name="TUSU6">Passwords do not match</string>
+    <string name="TUSU7">Enter the security answer</string>
+
+
+
+
+    <string name="plataforma">Platforms</string>
+    <string name="Mis_PLT">Platforms</string>
+    <string name="camaraGaleria">Gallery</string>
+    <string name="camaraFoto">Camera</string>
+    <string name="nuevaPlataforma">New Platform</string>
+    <string name="imagen">Image</string>
+    <string name="cancelCam">Action canceled</string>
+    <string name="errorCam">An error occurred while loading the image</string>
+    <string name="urlacceso">Access URL</string>
+    <string name="usuarioacceso">Access User</string>
+    <string name="passwordacceso">Access Password</string>
+
+    <string name="TPT5">The platform was added successfully!</string>
+    <string name="TPT6">The platform has been deleted successfully</string>
+
+
+
+    <string name="pelicula">Movies</string>
+    <string name="crear_peli">Create Movie</string>
+    <string name="titulo">Title</string>
+    <string name="duracion">Duration</string>
+    <string name="duracion">Duration</string>
+    <string name="calificacion">Rating</string>
+    <string name="genero">Genre</string>
+    <string-array name="array_generos">
+        <item name="g0">Select a genre</item>
+        <item name="g1">Action</item>
+        <item name="g2">Adventure</item>
+        <item name="g3">Comedy</item>
+        <item name="g4">Drama</item>
+        <item name="g5">Horror</item>
+        <item name="g6">Science Fiction</item>
+        <item name="g7">Fantasy</item>
+        <item name="g8">Documentary</item>
+    </string-array>
+
+    <string name="TPLT1">That platform already exists</string>
+    <string name="TPLT2">Name is a required field</string>
+    <string name="TPLT3">Enter the rating</string>
+
+    <string name="error">Oops, something went wrong</string>
+
+
+    <string name="preg_eliminar">Are you sure you want to delete it?</string>
+    <string name="TPL1">That movie already exists</string>
+    <string name="TPL2">Enter a score from 1 to 10</string>
+    <string name="TPL3">Enter a genre</string>
+    <string name="TPL4">Enter a platform</string>
+    <string name="TPL5">The movie was added successfully!</string>
+    <string name="TPL6">Enter a title</string>
+    <string name="TPL7">Before entering a movie, you must enter a platform</string>
+    <string name="TPL8">Enter a platform</string>
+
+    <string name="TE1">Enter an image</string>
+
+    <string name="borrar">Are you sure you want to delete?</string>
+    <string name="exportar">Export</string>
+
+    <string name="usu_exportados">Exported users</string>
+    <string name="plt_exportados">Exported platforms</string>
+    <string name="plc_exprtadas">Exported movies</string>
+    <string name="arch_export">Exported file</string>
+</resources>
+

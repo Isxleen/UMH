@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name" translatable="false">applogin54208217T</string>
+
+    <string name="hola">¡Hola!</string>
+    <string name="email">Email</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="contraseñacinfirm">Confirmar contraseña</string>
+    <string name="login">Iniciar sesion</string>
+    <string name="preg_nuevo">¿No tiene cuenta?</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="fnacimiento">Fecha Nacimiento</string>
+    <string name="continuar">Continuar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="pregSeguridad">Pregunta de Seguridad</string>
+    <string name="pregCancelar">¿Estás seguro de que quieres salir?</string>
+    <string name="respSeguridad">Respuesta</string>
+    <string name="si">Si</string>
+    <string name="intereses">¿Qué te interesa?</string>
+    <string name="Otintereses">Introduce otro</string>
+    <string name="segFA">Segundo factor de autentificación</string>
+    <string-array name="array_preguntas">
+        <item name="preg">Pregunta Seguridad</item>
+        <item name="preg0">¿Animal favorito?</item>
+        <item name="preg1">¿Ciudad favorita?</item>
+        <item name="preg2">¿Cuál es el nombre de tu mejor amigo?</item>
+    </string-array>
+
+    <string name="TUSU1">El email es un campo obligatorio</string>
+    <string name="TUSU2">El email introducido ya existe</string>
+    <string name="TUSU8">Introduce un email válido</string>
+    <string name="TUSU3">El nombre es un campo obligatorio</string>
+    <string name="TUSU4">La contraseña es un campo obligatorio</string>
+    <string name="TUSU5">Confirma la contraseña</string>
+    <string name="TUSU6">Las contraseñas no coinciden</string>
+    <string name="TUSU7">Introduce la respuesta de seguridad</string>
+
+
+
+
+    <string name="plataforma">Plataformas</string>
+    <string name="Mis_PLT">Plataformas</string>
+    <string name="camaraGaleria">Galería</string>
+    <string name="camaraFoto">Cámara</string>
+    <string name="nuevaPlataforma">Nueva Plataforma</string>
+    <string name="imagen">Imagen</string>
+    <string name="cancelCam">Acción cancelada</string>
+    <string name="errorCam">Ha ocurrido un error al cargar la imagen</string>
+    <string name="urlacceso">URL acceso</string>
+    <string name="usuarioacceso">Usuario de acceso</string>
+    <string name="passwordacceso">Contraseña de acceso</string>
+
+    <string name="TPT5">¡La plataforma se añadió correctamente!</string>
+    <string name="TPT6">La plataforma se ha eliminado correctamente</string>
+
+
+
+    <string name="pelicula">Películas</string>
+    <string name="crear_peli">Crear película</string>
+    <string name="titulo">Titulo</string>
+    <string name="duracion">Duración</string>
+    <string name="calificacion">Calificacion</string>
+    <string name="genero">Género</string>
+    <string-array name="array_generos">
+        <item name="g0">Selecciona un género</item>
+        <item name="g1">Acción</item>
+        <item name="g2">Aventura</item>
+        <item name="g3">Comedia</item>
+        <item name="g4">Drama</item>
+        <item name="g5">Terror</item>
+        <item name="g6">Ciencia ficción</item>
+        <item name="g4">Fantasía</item>
+        <item name="g4">Documental</item>
+    </string-array>
+
+    <string name="TPLT1">Ya existe esa plataforma</string>
+    <string name="TPLT2">El nombre es un campo obligatorio</string>
+    <string name="TPLT3">Introduce la calificacion</string>
+
+    <string name="error">Ups, algo salió mal</string>
+
+
+    <string name="preg_eliminar">¿Estás seguro de que quiere eliminarla?</string>
+    <string name="TPL1">Ya existe esa pelicula</string>
+    <string name="TPL2">Introduce una puntuación del 1 al 10</string>
+    <string name="TPL3">Introduce un género</string>
+    <string name="TPL4">Introduce una plataforma</string>
+    <string name="TPL5">¡La pelicula se añadió correctamente!</string>
+    <string name="TPL6">Introduce un titulo</string>
+    <string name="TPL7">Antes de introducir una pelicula, debes introducir una platafroma</string>
+    <string name="TPL8">Introduzca una plataforma</string>
+
+
+
+    <string name="TE1">Introduce una imágen</string>
+
+    <string name="borrar">¿Estás seguro de que quieres eliminar?</string>
+    <string name="exportar">Exportar</string>
+
+    <string name="usu_exportados">usuarios exportados</string>
+    <string name="plt_exportados">plataformas exportadas</string>
+    <string name="plc_exprtadas">peliculas exportadas</string>
+    <string name="arch_export">Archivo exportado</string>
+
+</resources>

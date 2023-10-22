@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="74dp"
+        android:background="@color/black"
+        tools:ignore="ExtraText">
+
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/crear_cuenta"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:typeface="sans"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/preg_seguridad"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginStart="45dp"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/spinner_shape"
+            android:ems="10"
+            android:entries="@array/array_preguntas"
+            android:hint="@string/pregSeguridad"
+            android:minHeight="48dp"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lytFechaNac"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+
+        <TextView
+            android:id="@+id/txtIntereses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="141dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/intereses"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:typeface="sans"
+            app:layout_constraintBottom_toTopOf="@+id/chip_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lytRespPreg"
+            tools:ignore="TextSizeCheck" />
+
+
+        <EditText
+            android:id="@+id/edit_interests_other"
+            android:layout_width="35dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            android:hint="Añadir intereses adicionales"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/preg_seguridad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/switchFactor"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="326dp"
+            android:layout_height="149dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/layutbotones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtIntereses">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_tecnologia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:shadowColor="@color/secondaryColor"
+                android:text="Tecnología" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_deportes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Deportes" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_redes_sociales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Redes sociales" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_cine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Cine" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_otro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Otro" />
+
+            <EditText
+                android:id="@+id/txtOtrosIntereses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="#30ffffff"
+                android:ems="10"
+                android:hint="@string/Otintereses"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+
+                android:textColorHint="@color/white"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtcontraseña"
+                tools:ignore="MissingConstraints" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+        <LinearLayout
+            android:id="@+id/layutbotones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip_group"
+            app:layout_constraintVertical_bias="0.694"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/cancelar"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+
+                android:text="@string/cancelar"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/continuar"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/continuar"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+
+                android:text="@string/continuar"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cancelar"
+                app:layout_constraintTop_toBottomOf="@+id/chip_group"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/switchFactor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginBottom="20dp"
+            android:checked="false"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/segFA"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:typeface="sans"
+            app:layout_constraintBottom_toTopOf="@+id/layutbotones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip_group"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/AppTheme.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="45dp"
+            app:boxBackgroundMode="filled"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitulo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            style="@style/AppTheme.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="15dp"
+            app:boxBackgroundMode="filled"
+            app:layout_constraintBottom_toTopOf="@+id/lytApellidos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nombre" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lytApellidos"
+            style="@style/AppTheme.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/apellidos" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lytContraseña"
+            style="@style/AppTheme.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/lytConfContr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lytApellidos">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtcontraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/contraseña"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lytConfContr"
+            style="@style/AppTheme.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/lytFechaNac"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lytContraseña">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtConfContra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/contraseñacinfirm"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lytFechaNac"
+            style="@style/AppTheme.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/preg_seguridad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lytConfContr">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCumple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/fnacimiento" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lytRespPreg"
+            style="@style/AppTheme.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtIntereses"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/preg_seguridad">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/resp_preguntaSeg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/respSeguridad" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
