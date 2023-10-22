@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
+        <link rel="stylesheet" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Bienvenido a la Práctica 2 de Cordova</h1>
+            <img src="img/logo.png" alt="Logo Cordova">
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" oninput="activarBoton()">
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" oninput="activarBoton()">
+            </div>
+
+            <div style="height: 150px; overflow-y: scroll;">
+                <h3>Términos de uso:</h3>
+                <div id="terms" class="terms-container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum varius tellus vitae consequat. 
+                        Sed ut nibh vestibulum, tincidunt sem at, maximus elit. Vestibulum eget semper dui. In eu neque in nisi faucibus
+                         dapibus. Proin eu dui dignissim, consectetur urna non, gravida felis. Fusce rhoncus, arcu eget dapibus tristique,
+                         est sem feugiat risus, et scelerisque nisl diam vel mauris. Quisque efficitur pellentesque ante, et suscipit mi posuere
+                          nec. Suspendisse potenti. Mauris pellentesque velit sed urna gravida, nec fringilla enim fringilla.</p>
+                    <p>Phasellus dapibus leo nec risus posuere, id viverra orci aliquet. Sed auctor iaculis ligula at dignissim. Maecenas vitae
+                         libero non purus ultrices interdum nec a neque. Fusce consectetur semper ligula, ac dapibus tellus euismod id. 
+                         Suspendisse eget malesuada lectus. Nulla facilisi. Nulla vel lorem fringilla, varius ipsum id, pharetra ex. Donec 
+                         id varius elit, sed tristique lorem. Vivamus pulvinar massa enim, non lobortis lectus sagittis in.</p>
+                    <p>Donec ac enim a tortor bibendum ultricies eu at tortor. Fusce facilisis sapien at velit ullamcorper varius. 
+                        Morbi sed est ac nunc faucibus malesuada non in enim. Nulla aliquet, ligula vel consectetur faucibus, neque eros tincidunt
+                         quam, nec commodo est urna id quam. Vestibulum id ipsum mauris. Nam a mauris metus. Sed ac pulvinar nisl, ac vestibulum
+                          arcu. Etiam in ipsum consectetur, dapibus urna ac, lacinia dui. Suspendisse et ultricies mi. Fusce vulputate venenatis
+                           turpis, sed interdum turpis consequat id. Etiam hendrerit, neque eu posuere malesuada, ipsum diam tincidunt quam, vel
+                            ultrices quam odio vel orci. Sed congue cursus luctus.</p>
+
+                </div>
+                <div class="accept-terms-container">
+                    <label for="acceptTerms">Acepto los términos</label>
+                    <input type="checkbox" id="acceptTerms" name="acceptTerms" onclick="activarBoton()">
+                </div>
+            </div>
+
+            <div>
+                <button id="createButton" class="create-account-button" disabled onclick="mostrarMensaje()">Crear Cuenta</button>
+        
+        </div>
+
+        <script src="cordova.js"></script>
+       
+    </body>
+</html>
+<script src="js/index.js"></script>
